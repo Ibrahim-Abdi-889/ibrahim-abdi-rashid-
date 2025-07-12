@@ -1,0 +1,327 @@
+/* === Global Styles === */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f0f2f5; /* Light background */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+}
+
+/* === Navbar === */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffd700;
+}
+
+.navbar .utility-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .utility-nav a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar .search-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.navbar .search-icon:hover {
+    color: #ffd700;
+}
+
+/* === Hero Section === */
+.hero-section {
+    background-image: url('image/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+}
+
+.book-now-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-now-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* === Booking Widget === */
+.booking-widget-section {
+    background-color: #f0f2f5;
+    padding-bottom: 40px;
+    margin-top: -120px;
+    position: relative;
+    z-index: 200;
+}
+
+.booking-widget-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 25px 30px;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 25px;
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #555;
+    border-bottom: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.tab-button i {
+    font-size: 1.2em;
+}
+
+.tab-button.active {
+    color: #28a745;
+    border-bottom-color: #28a745;
+}
+
+.tab-button:not(.active):hover {
+    color: #333;
+    border-bottom-color: #ccc;
+}
+
+/* === Booking Form === */
+.booking-form-area form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 1em;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #28a745;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.2);
+}
+
+.show-flights-btn {
+    background-color: #343a40;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+}
+
+.show-flights-btn:hover {
+    background-color: #1d2124;
+    transform: translateY(-2px);
+}
+
+/* === Helpful Info Cards === */
+.helpful-info-section {
+    padding: 60px 0;
+    background-color: #f0f2f5;
+}
+
+.helpful-info-section h2,
+.popular-destinations-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #333;
+    position: relative;
+}
+
+.helpful-info-section h2::after,
+.popular-destinations-section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background-color: #28a745;
+    border-radius: 2px;
+    transform: translateX(-50%);
+}
+
+.helpful-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.info-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    border-left: 5px solid #28a745;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.info-card h3 {
+    color: #28a745;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.read-more-btn {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #1d2124;
+}
+
+/* === Popular Destinations === */
+.popular-destinations-section {
+    padding: 60px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.destination-images {
+    margin-top
